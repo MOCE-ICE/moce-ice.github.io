@@ -1,25 +1,10 @@
-cls
-
+Clear-Host
 hexo clean
-
-pause
-
 hexo g
-
-pause
-
+Remove-Item .\docs\*
+Remove-Item .\docs
 xcopy .\public\ .\docs\ /E /H
-
-pause
-
 git add .
-
-pause
-
-git commit -m %1
-
-pause
-
+git commit -m Update
 git push
-
-pause
+Pause
