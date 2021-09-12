@@ -1,28 +1,28 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
+# Hexo 配置
+## 文档: https://hexo.io/zh-cn/docs/configuration.html
+## 源码: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+# 网站
+title: '星光与远方'
+subtitle: '追逐流星'
+description: '一个测试站点'
+keywords: 'Test, MOCE-ICE'
+author: 'MOCE-ICE'
+language: 'zh-Hans-CN'
+timezone: 'Asia/Hong_Kong'
 
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+# 网址
+## 在此处设置您的网站网址。 例如，如果您使用 GitHub Page，请将 url 设置为 'https://username.github.io/project'
+url: https://moce-ice.github.io/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # 是否在永久链接中保留尾部的 index.html，设置为 false 时去除
+  trailing_html: false # 是否在永久链接中保留尾部的 .html, 设置为 false 时去除 (对尾部的 index.html无效)
 
-# Directory
+# 目录
 source_dir: source
-public_dir: public
+public_dir: docs
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -30,28 +30,28 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
-# Writing
-new_post_name: :title.md # File name of new posts
+# 文章
+new_post_name: :title.md # 新文章的文件名称
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: false # 把标题转换为 title case
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+  enable: true # 在新标签中打开链接
+  field: site # 对整个网站（site）生效或仅对文章（post）生效
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
