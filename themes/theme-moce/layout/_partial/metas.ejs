@@ -1,10 +1,10 @@
 <%
     var description = config.description;
-    if (is_post() && post.description) { description = post.description; }
+    if (is_post() && page.description) { description = page.description; }
     var keywords = config.keywords;
-    if (is_post() && post.keywords) { keywords = post.keywords; }
+    if (is_post() && page.keywords) { keywords = page.keywords; }
     var author = config.author;
-    if (is_post() && post.author) { author = post.author; }
+    if (is_post() && page.author) { author = page.author; }
 %>
 <meta charset="UTF-8" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />

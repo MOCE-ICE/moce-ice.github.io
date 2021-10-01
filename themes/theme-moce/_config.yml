@@ -13,7 +13,7 @@ open_graph:
     app_id:
 
 cdn:
-  enable: false
+  enable: true
   url: /
 
 theme_color:
