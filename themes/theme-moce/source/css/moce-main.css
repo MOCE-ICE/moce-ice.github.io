@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+@keyframes tab-unpinned {
+  0%    {min-height: 48px; opacity: 1;}
+  25%   {opacity: 0.75;}
+  30%   {min-height: 0; opacity: 0.5;}
+  100%  {min-height: 0; opacity: 0;}
+}
+.tab-unpinned {
+  opacity: 0;
+  animation-name: tab-unpinned;
+  animation-duration: 0.5s;
+  height: 0;
+  min-height: 0;
+}
+@keyframes tab-pinned {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+}
+.tab-pinned {
+  animation-name: tab-pinned;
+  animation-duration: 0.5s;
+}

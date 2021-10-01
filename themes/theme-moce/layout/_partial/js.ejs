@@ -1,0 +1,7 @@
+<% if (theme.cdn.enable == true) { %>
+	<%- js('https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js') %>
+	<%- js(theme.cdn.url+'js/moce-main.js') %>
+<% } else { %>
+	<%- js('/js/mdui.min.js') %>
+	<%- js('/js/moce-main.js') %>
+<% } %>

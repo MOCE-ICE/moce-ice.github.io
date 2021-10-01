@@ -1,0 +1,38 @@
+avater:
+  gravatar:
+    enable: false
+    email: 1411483638@qq.com
+  url: /icons/avater/128x.png
+favicon: /icons/favicon/32x.ico
+
+open_graph:
+  type: blog
+  twitter_id: XYY1411
+  facebook:
+    admin_id:
+    app_id:
+
+cdn:
+  enable: false
+  url: /
+
+theme_color:
+  primary: blue
+  accent: red
+  background: cyan-50
+
+github_repo: https://github.com/moce-ice/moce-ice.github.io
+
+menu:
+  - name: home
+    type: icon
+    href: /
+    text: HOME
+    icon: home
+    enable: true
+  - name: links
+    type: icon
+    href: /links/
+    text: LINKS
+    icon: account-group
+    enable: false

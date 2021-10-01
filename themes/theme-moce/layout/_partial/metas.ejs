@@ -1,0 +1,32 @@
+<%
+    var description = config.description;
+    if (is_post() && post.description) { description = post.description; }
+    var keywords = config.keywords;
+    if (is_post() && post.keywords) { keywords = post.keywords; }
+    var author = config.author;
+    if (is_post() && post.author) { author = post.author; }
+%>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+<meta name="renderer" content="webkit" />
+<meta name="force-rendering" content="webkit" />
+<meta name="robots" content="all" />
+<%- meta_generator() %>
+<meta name="author" content="<%= author %>" />
+<meta name="description" content="<%= description %>">
+<meta name="keywords" content="<%= keywords %>">
+<%- open_graph({
+    title: page.title,
+    type: theme.open_graph.type,
+    image: theme.favicon,
+    site_name: config.title,
+    description: description,
+    twitter_card: 'summary',
+    twitter_id: theme.open_graph.twitter_id,
+    twitter_site: '@'+theme.open_graph.twitter_id,
+    fb_admins: theme.open_graph.facebook.admin_id,
+    fb_app_id: theme.open_graph.facebook.admin_id
+}) %>

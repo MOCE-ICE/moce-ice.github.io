@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- This is an Hexo theme made by XYY1411 in GPLv.3 -->
+<!-- The project url is https://github.com/moce-ice.github.io/ -->
+<html lang="<%= config.language %>">
+    <%- partial('_partial/head') %>
+    <body class="
+        mdui-theme-primary-<%= theme.theme_color.primary %>
+        mdui-theme-accent-<%= theme.theme_color.accent %>
+        mdui-color-<%= theme.theme_color.background %>
+        mdui-appbar-with-toolbar
+    ">
+        <%- partial('_partial/header') %>
+        <main>
+            <%- body %>
+        </main>
+        <%- partial('_partial/footer') %>
+        <%- partial('_partial/plugin.ejs') %>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<header class="
+    mdui-appbar
+    mdui-appbar-fixed
+    mdui-appbar-scroll-toolbar-hide
+">
+    <div class="mdui-toolbar mdui-color-theme">
+        <button onclick="tabHide()" class="mdui-btn mdui-ripple mdui-btn-icon">
+            <i class="mdui-icon mdi mdi-menu"></i>
+        </button>
+        <a href="<%- url_for('/') %>" class="mdui-typo-title mdui-ripple"><%= config.title %></a>
+        <a href="<%= theme.github_repo %>" class="mdui-toolbar-spacer mdui-typo-title mdui-ripple">
+            <small><%= config.subtitle %></small>
+        </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <button href="javascript:;" class="mdui-btn mdui-ripple mdui-btn-icon">
+            <i class="mdui-icon mdi mdi-magnify"></i>
+        </button>
+        <button onclick="history.go(-1);" class="mdui-btn mdui-ripple mdui-btn-icon">
+            <i class="mdui-icon mdi mdi-arrow-left"></i>
+        </button>
+        <button onclick="history.go(1);" class="mdui-btn mdui-ripple mdui-btn-icon">
+            <i class="mdui-icon mdi mdi-arrow-right"></i>
+        </button>
+        <button onclick="location.reload();" class="mdui-btn mdui-ripple mdui-btn-icon">
+            <i class="mdui-icon mdi mdi-refresh"></i>
+        </button>
+    </div>
+    <div
+        id="tab"
+        class="
+            mdui-tab
+            tab-unpinned
+            mdui-color-theme
+            mdui-tab-centered
+            "
+        style="display: none"
+    >
+        <% theme.menu.forEach(menu => { %>
+            <%
+                let enable = "";
+                if (menu.enable == false) {
+                    enable ="disabled";
+                }
+            %>
+            <a
+                href="<%= menu.href %>"
+                class="mdui-ripple mdui-ripple-white"
+                <%= enable %>
+            >
+                <% if (menu.type == "text") { %>
+                    <lable><%= menu.text %></lable>
+                <% } else if (menu.type == "icon") { %>
+                    <i class="mdui-icon mdi mdi-<%= menu.icon %>"></i>
+                <% } %>
+            </a>
+        <% }); %>
+    </div>
+</header>
